@@ -63,7 +63,7 @@ namespace LCCrosshair
 
         public static void Log(string msg)
         {
-            Instance.Logger.LogInfo(["[LC Crosshair Mod]" + msg);
+            Instance.Logger.LogInfo("[LC Crosshair Mod]" + msg);
         }
 
 
@@ -118,9 +118,9 @@ namespace LCCrosshair
             {
                 byte[] array = File.ReadAllBytes(filePath);
                 Texture2D val = new Texture2D(2, 2, (TextureFormat)5, false);
-                ImageConversion.LoadImage(val, array);  //TODO figure out image conversion
+                ImageConversion.LoadImage(val, array);
                 ((Texture)val).filterMode = (FilterMode)0;
-                icon = Sprite.Create(val, new Rect(0f, 0f, (float)((Texture)val).width, (float)((Texture)val).height, new Vector2(0.5f, 0.5f), Mathf.Min(configWidth.Value, configHeight.Value));
+                icon = Sprite.Create(val, new Rect(0f, 0f, (float)((Texture)val).width, (float)((Texture)val).height), new Vector2(0.5f, 0.5f), Mathf.Min(configWidth.Value, configHeight.Value));
                 Log("Image " + filePath + " loaded");
             }
             catch (Exception)
