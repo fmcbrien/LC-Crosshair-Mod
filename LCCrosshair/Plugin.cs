@@ -43,13 +43,13 @@ namespace LCCrosshair
 
         public static ConfigEntry<int> configA;
 
-        public static Color32 color;
+        public static Color32 crosshairColor;
 
-        public static Sprite icon;
+        public static Sprite crosshairIcon;
 
         private static string getPath;
 
-        private static string GetPath
+        public static string GetPath
         {
             get
             {
@@ -100,7 +100,7 @@ namespace LCCrosshair
                 {
                     LoadIcon(Path.Combine(GetPath, configImage.Value));
                 }
-                color = new Color32((byte)configR.Value, (byte)configG.Value, (byte)configB.Value, (byte)configA.Value);
+                crosshairColor = new Color32((byte)configR.Value, (byte)configG.Value, (byte)configB.Value, (byte)configA.Value);
                 harmony.PatchAll();
             }
 
@@ -120,7 +120,7 @@ namespace LCCrosshair
                 Texture2D val = new Texture2D(2, 2, (TextureFormat)5, false);
                 ImageConversion.LoadImage(val, array);
                 ((Texture)val).filterMode = (FilterMode)0;
-                icon = Sprite.Create(val, new Rect(0f, 0f, (float)((Texture)val).width, (float)((Texture)val).height), new Vector2(0.5f, 0.5f), Mathf.Min(configWidth.Value, configHeight.Value));
+                crosshairIcon = Sprite.Create(val, new Rect(0f, 0f, (float)((Texture)val).width, (float)((Texture)val).height), new Vector2(0.5f, 0.5f), Mathf.Min(configWidth.Value, configHeight.Value));
                 Log("Image " + filePath + " loaded");
             }
             catch (Exception)
