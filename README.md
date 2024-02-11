@@ -26,7 +26,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-As my first offical personal coding "project", this program was created as a way to teach myself C# for Unity using BepInEx to create a mod for the game Lethal Company. I do not claim this project to be an original work as it was entirely based off of the current Onionmilk_Crosshair mod and used as a way for me to break down the existing code and recreate it in my own program and understand the complexities of creating games/mods in Unity.
+As my first offical personal coding "project", this program was created as a way to teach myself C# for Unity using BepInEx to create a mod for the game Lethal Company. I do not claim this project to be an original work as it was entirely based off of the current Onionmilk_Crosshair mod and used as a way for me to break down the existing code and recreate it in my own program and understand the complexities of creating games/mods in Unity. **Note: I do not take full credit for this mod. This was a learning experience for me, not an original creation.**
 
 Future Planned Improvements:
 * Customizable mod similar to FPS games where you can change the size, shape, and color of the crosshair in the settings menu
